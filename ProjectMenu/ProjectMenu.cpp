@@ -1,13 +1,10 @@
 ﻿#include <iostream>
 
-#include "menu_item.hpp";
+#include "menu_struct.hpp";
 #include "menu_functions.hpp"
 
 int main() {
 	std::setlocale(LC_ALL, "");
-
-
-
 
 	//Объявляем элементы меню
 	AKrivoshein::MenuItem study_mp = { "1 - учить современное программирование с лучшим преподаваталем", AKrivoshein::study_mp };
@@ -45,7 +42,6 @@ int main() {
 
 	study.parent = &begin;
 	exit.parent = &begin;
-
 
 
 	const AKrivoshein::MenuItem* current = &begin;

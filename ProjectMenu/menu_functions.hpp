@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-#include "menu_item.hpp"
+#include "menu_struct.hpp"
 
 namespace AKrivoshein {
 	const MenuItem* show_menu(const MenuItem* current);
