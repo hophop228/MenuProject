@@ -36,8 +36,19 @@ int main() {
 
 	AKrivoshein::MenuItem begin = { nullptr, AKrivoshein::show_menu, begin_children, begin_size };
 
-	const AKrivoshein::MenuItem* current = &begin;
+	study_go_back.parent = &study;
+	study_mp.parent = &study;
+	study_linux.parent = &study;
+	study_eng.parent = &study;
+	study_org.parent = &study;
+	study_algebra.parent = &study;
 
+	study.parent = &begin;
+	exit.parent = &begin;
+
+
+
+	const AKrivoshein::MenuItem* current = &begin;
 	do {
 		current = current->func(current);
 	} while (true);

@@ -7,5 +7,7 @@ namespace AKrivoshein {
 
 		const MenuItem* const* children; //дети нашего эл-та меню
 		const int children_amount; //кол-во детей
+
+		const MenuItem* parent;
 	};
 }

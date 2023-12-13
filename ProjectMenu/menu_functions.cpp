@@ -54,6 +54,6 @@ const AKrivoshein::MenuItem* AKrivoshein::study_algebra(const MenuItem* current)
 }
 
 const AKrivoshein::MenuItem* AKrivoshein::study_go_back(const AKrivoshein::MenuItem* current) {
-	std::cout << "0";
-	return current;
+	std::cout << "0" << std::endl;
+	return current->parent->parent;
 }
