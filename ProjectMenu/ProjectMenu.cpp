@@ -1,23 +1,29 @@
 ﻿#include <iostream>
 
+#include "menu_item.hpp";
+#include "menu_functions.hpp"
+
 int main() {
 	std::setlocale(LC_ALL, "");
+	
+	//Объявляем элементы меню
+	AKrivoshein::MenuItem begin = { "1 - хочу учиться математике", AKrivoshein::begin };
+	AKrivoshein::MenuItem exit = { "0 - хочу лежать", AKrivoshein::exit };
+
+	AKrivoshein::MenuItem* items_of_menu[] = { &exit, &begin };
+	const int items_of_menu_size = sizeof(items_of_menu) / sizeof(items_of_menu[0]);
 
 	int input;
 
 	do {
 		std::cout << "Привет, друг!" << std::endl;
-		std::cout << "1 - хочу учиться математике" << std::endl;
-		std::cout << "0 - хочу лежать" << std::endl;
+		for (int i = 0; i < items_of_menu_size; i++) {
+			std::cout << items_of_menu[i]->title << std::endl;
+		}
 		std::cout << "Ввод: ";
 
 		std::cin >> input;
-		if (input == 1) {
-			//TODO
-		}
-		else if (input == 0) {
-			exit(0);
-		}
+		items_of_menu[input]->func();
 
 		std::cout << std::endl;
 

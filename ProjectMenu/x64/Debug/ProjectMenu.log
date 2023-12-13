@@ -1,2 +1,3 @@
 ﻿  ProjectMenu.cpp
+C:\Users\User\Projects C++\ProjectMenu\ProjectMenu\ProjectMenu.cpp(3,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
   ProjectMenu.vcxproj -> C:\Users\User\Projects C++\ProjectMenu\x64\Debug\ProjectMenu.exe
